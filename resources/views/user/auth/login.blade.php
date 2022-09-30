@@ -1,6 +1,14 @@
 <x-guest-layout>
     <x-auth-card>
+<<<<<<< HEAD
       ユーザー用
+=======
+<<<<<<< HEAD:resources/views/admin/auth/login.blade.php
+      管理者用
+=======
+      ユーザー用
+>>>>>>> 6e064b5431680263acdd0d14ea0cac0a252ac368:resources/views/user/auth/login.blade.php
+>>>>>>> 6e064b5431680263acdd0d14ea0cac0a252ac368
         <x-slot name="logo">
             <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -13,7 +21,15 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
+<<<<<<< HEAD
         <form method="POST" action="{{ route('user.login') }}">
+=======
+<<<<<<< HEAD:resources/views/admin/auth/login.blade.php
+        <form method="POST" action="{{ route('admin.login') }}">
+=======
+        <form method="POST" action="{{ route('user.login') }}">
+>>>>>>> 6e064b5431680263acdd0d14ea0cac0a252ac368:resources/views/user/auth/login.blade.php
+>>>>>>> 6e064b5431680263acdd0d14ea0cac0a252ac368
             @csrf
 
             <!-- Email Address -->
@@ -42,8 +58,18 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
+<<<<<<< HEAD
                 @if (Route::has('user.password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('user.password.request') }}">
+=======
+<<<<<<< HEAD:resources/views/admin/auth/login.blade.php
+                @if (Route::has('admin.password.request'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('admin.password.request') }}">
+=======
+                @if (Route::has('user.password.request'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('user.password.request') }}">
+>>>>>>> 6e064b5431680263acdd0d14ea0cac0a252ac368:resources/views/user/auth/login.blade.php
+>>>>>>> 6e064b5431680263acdd0d14ea0cac0a252ac368
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
