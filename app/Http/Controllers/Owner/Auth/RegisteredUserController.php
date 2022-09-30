@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Onwer\Auth;
+namespace App\Http\Controllers\Owner\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Owner;
@@ -39,11 +39,11 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $user = Owner::create([
+        Auth::guard('owners')->login($user = Owner::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-        ]);
+        ]));
 
         event(new Registered($user));
 
