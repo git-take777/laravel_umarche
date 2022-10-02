@@ -22,6 +22,7 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
+        // それぞれのルートで指定したURLにおいて、路銀できない→リダイレクト。
         if (! $request->expectsJson()) {
             if(Route::is('owner.*')) {
                 return route($this->owner_route);
