@@ -35,10 +35,6 @@ Route::get('/dashboard', function () {
     return view('admin/dashboard');
 })->middleware(['auth:admin'])->name('dashboard');
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 7410e09e9dde3b572ca25d6d5869390952097d6a
 
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
