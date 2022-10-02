@@ -40,7 +40,7 @@ class OwnersController extends Controller
         // ]);
         // var_dump($q_first);
         // dd($e_all, $q_get, $q_first, $c_test);
-
+				$owners = owner::select('name', 'email', 'created_at')->get();
         return view('admin.owners.index', 
         compact('owners'));
     }
