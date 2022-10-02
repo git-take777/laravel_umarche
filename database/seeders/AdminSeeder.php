@@ -22,6 +22,5 @@ class AdminSeeder extends Seeder
             'password' => Hash::make('password123'),
             'created_at' => '2021/09/21 11:11:11',
         ]);
-
     }
 }
