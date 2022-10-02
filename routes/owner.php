@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ComponentTestController;
-use App\Http\Controllers\LifeCycleTestController;
 
 use App\Http\Controllers\Owner\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Owner\Auth\ConfirmablePasswordController;
@@ -31,10 +29,6 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('owner.dashboard');
 })->middleware(['auth:owners'])->name('dashboard');
-
-Route::get('/component-test1', [ComponentTestController::class, 'showComponent1']);
-Route::get('/component-test2', [ComponentTestController::class, 'showComponent2']);
-Route::get('/servicecontainertest', [LifeCycleTestController::class, 'showServiceContainerTest']);
 
 
 

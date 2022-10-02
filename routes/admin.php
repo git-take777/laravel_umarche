@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ComponentTestController;
-use App\Http\Controllers\LifeCycleTestController;
 
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\ConfirmablePasswordController;
@@ -13,6 +11,7 @@ use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\RegisteredUserController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use App\Http\Controllers\Admin\OwnersController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +35,10 @@ Route::get('/dashboard', function () {
     return view('admin/dashboard');
 })->middleware(['auth:admin'])->name('dashboard');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7410e09e9dde3b572ca25d6d5869390952097d6a
 
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
@@ -61,7 +64,7 @@ Route::middleware('guest')->group(function () {
                 ->name('password.update');
 });
 
-Route::middleware(':admin')->group(function () {
+Route::middleware('auth:admin')->group(function () {
     Route::get('verify-email', [EmailVerificationPromptController::class, '__invoke'])
                 ->name('verification.notice');
 
