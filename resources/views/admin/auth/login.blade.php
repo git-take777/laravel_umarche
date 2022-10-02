@@ -44,11 +44,19 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
+
                 @if (Route::has('admin.password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('admin.password.request') }}">
+                @endif
+                {{-- @if (Route::has('user.password.request'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('user.password.request') }}">
+
+                @if (Route::has('admin.password.request'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('admin.password.request') }}">
+
                         {{ __('Forgot your password?') }}
                     </a>
-                @endif
+                @endif --}}
 
                 <x-button class="ml-3">
                     {{ __('Log in') }}
