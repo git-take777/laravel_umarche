@@ -12,8 +12,9 @@
 
 <section class="text-gray-600 body-font">
   <div class="container px-5  mx-auto">
+    <x-flash-message status="info" />
     <div class="flex justify-end mb-4">
-      <button onclick="location.href='{{ route('admin.owners.create') }}'" class=" text-black bg-pink-500 border-2 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">新規登録する</button>
+      <button onclick="location.href='{{ route('admin.owners.create') }}'" class=" text-black bg-pink-500 border-2  py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">新規登録する</button>
     </div>
     <div class="flex flex-col text-center w-full mb-20">
     </div>
